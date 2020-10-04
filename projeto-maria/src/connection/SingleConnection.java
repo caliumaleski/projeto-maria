@@ -5,18 +5,18 @@ import java.sql.DriverManager;
 
 /*
  * Classe SingleConnection
- * Respons·vel Por Fazer a Conex„o com o BD
+ * Respons√°vel Por Fazer a Conex√£o com o BD
  
  */
 public class SingleConnection {
 
 	private static String banco = "jdbc:postgresql://localhost:5432/projeto-maria?autoReconnect=true";
 	private static String user = "postgres";
-	private static String password = "caliu";/*senha da sua hospedagem*/
+	private static String password = "admin";/*senha da sua hospedagem*/
 	private static Connection connection = null;
 	
 	/*
-	 * Chamada Est·tica do MÈtodo conectar()
+	 * Chamada Est√°tica do M√©todo conectar()
 	 */
 	static {
 		conectar();
@@ -24,15 +24,15 @@ public class SingleConnection {
 	
 	/*
 	 * Construtor da Classe SingleConnection()
-	 * Chama o MÈtodo conectar()
+	 * Chama o M√©todo conectar()
 	 */
 	public SingleConnection() {
 		conectar();
 	}
 	
 	/*
-	 * MÈtodo conectar()
-	 * ProvÍ os Meios de Conex„o ao BD
+	 * M√©todo conectar()
+	 * Prov√™ os Meios de Conex√£o ao BD
 	 */
 	private static void conectar() {
 		try {
@@ -48,8 +48,8 @@ public class SingleConnection {
 	}
 	
 	/*
-	 * MÈtodo getConnection()
-	 * Respons·vel Por Fazer Uso da Conex„o na AplicaÁ„o
+	 * M√©todo getConnection()
+	 * Respons√°vel Por Fazer Uso da Conex√£o na Aplica√ß√£o
 	 */
 	public static Connection getConnection() {
 		return connection;
